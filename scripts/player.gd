@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@onready var anim: AnimatedSprite2D = $CollisionShape2D/AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 
 const SPEED = 200.0
