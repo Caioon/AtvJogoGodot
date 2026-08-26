@@ -124,5 +124,6 @@ z_index = 1
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_t07pf")
-animation = &"jump"
+animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.6110793
