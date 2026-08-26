@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bvj10qqe6tk8d"]
 
-[ext_resource type="Script" uid="uid://ue8e5qb827vs" path="res://scripts/player.gd" id="1_b0kkn"]
 [ext_resource type="Texture2D" uid="uid://bqlrkvsx5krm" path="res://sprites/1 - Penguin/Idle (16 x 16).png" id="2_e4p34"]
 [ext_resource type="Texture2D" uid="uid://dg4xfmf7ffu5" path="res://sprites/1 - Penguin/Waddling (16 x 16).png" id="3_e4p34"]
 [ext_resource type="Texture2D" uid="uid://cfg6bpqo57lsy" path="res://sprites/1 - Penguin/Jump (16 x 16).png" id="3_rfe5m"]
@@ -111,23 +110,16 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="player" type="Node2D" unique_id=870111983]
+[node name="player" type="CharacterBody2D" unique_id=1587354535 groups=["player"]]
 position = Vector2(57, 31)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=134733067]
-script = ExtResource("1_b0kkn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=828112370]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=828112370]
 shape = SubResource("CapsuleShape2D_t07pf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D/CollisionShape2D" unique_id=282045638]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=282045638]
 z_index = 1
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_t07pf")
 animation = &"jump"
 autoplay = "idle"
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D" unique_id=516301019]
-limit_left = 0
-limit_bottom = 200
